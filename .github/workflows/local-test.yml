@@ -1,5 +1,5 @@
 ---
-name: test-local
+name: local-test
 on:  # yamllint disable-line rule:truthy
   pull_request:
   push:
@@ -14,6 +14,6 @@ jobs:
       - uses: actions/checkout@v1
       - uses: ./
         with:
-          file_or_dir: .github/test.yml
+          file_or_dir: .github/workflows/local-test.yml
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
